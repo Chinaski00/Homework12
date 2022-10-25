@@ -4,7 +4,7 @@ public class Main {
         Book book2 = new Book("Maksim", 2020);
         Author author1 = new Author("Konstantin", "Chinaski");
         Author author2 = new Author("Maksim", "Ignatiev");
-        book1.setYearÎfPublication(2019);
+        book1.setYearÎfPublication(2018);
         System.out.println(book1.getYearÎfPublication());
     }
 }
