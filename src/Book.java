@@ -22,4 +22,25 @@ public class Book {
     public void setYearÎfPublication(int yearÎfPublication){
         this.yearÎfPublication = yearÎfPublication;
     }
+
+    public String toString(){
+        return "Íàçâàíèå êíèãè: " + nameBook;
+    }
+
+    public boolean equals(Object o){
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Book book = (Book) o;
+        return nameBook.equals(book.nameBook) && author.equals(book.author);
+    }
+
+    public int hashCode(){
+        int result = nameBook == null ? 0 : nameBook.hashCode();
+        result = result + yearÎfPublication;
+        return result;
+    }
 }
