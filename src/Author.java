@@ -13,6 +13,7 @@ public class Author {
      return "ิศฮ: " + fullName;
     }
 
+    @Override
     public boolean equals(Object object){
         if (this == object) {
             return true;
@@ -24,6 +25,7 @@ public class Author {
         return fullName.equals(author.fullName);
     }
 
+    @Override
     public int hashCode(){
         int result = fullName == null ? 0 : fullName.hashCode();
         return result;

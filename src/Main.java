@@ -8,6 +8,6 @@ public class Main {
         Author author2 = new Author("Makism Ignatiev");
         Book book1 = new Book(2000,"Moon", author1);
         Book book2 = new Book(2020,"JavaProgramming", author2);
-        book2.setYearÎfPublication(2022);
+        book2.setYearOfPublication(2022);
     }
 }

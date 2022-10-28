@@ -1,10 +1,12 @@
+import java.util.Objects;
+
 public class Book {
-    private int yearŒfPublication;
+    private int yearOfPublication;
     private String nameBook;
     private Author author;
 
     public Book(int yearOfPublication, String nameBook, Author author){
-        this.yearŒfPublication = yearŒfPublication;
+        this.yearOfPublication = yearOfPublication;
         this.nameBook = nameBook;
         this.author = author;
     }
@@ -15,18 +17,19 @@ public class Book {
     public String getNameBook(){
         return nameBook;
     }
-    public int getYearŒfPublication(){
-        return yearŒfPublication;
+    public int getYearOfPublication(){
+        return yearOfPublication;
     }
 
-    public void setYearŒfPublication(int yearŒfPublication){
-        this.yearŒfPublication = yearŒfPublication;
+    public void setYearOfPublication(int yearOfPublication){
+        this.yearOfPublication = yearOfPublication;
     }
 
     public String toString(){
         return "Õ‡Á‚‡ÌËÂ ÍÌË„Ë: " + nameBook;
     }
 
+    @Override
     public boolean equals(Object o){
         if (this == o) {
             return true;
@@ -38,9 +41,10 @@ public class Book {
         return nameBook.equals(book.nameBook) && author.equals(book.author);
     }
 
+    @Override
     public int hashCode(){
         int result = nameBook == null ? 0 : nameBook.hashCode();
-        result = result + yearŒfPublication;
-        return result;
+        result = result + yearOfPublication;
+        return Objects.hash(yearOfPublication, nameBook, author);
     }
 }
